@@ -54,7 +54,7 @@
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link">Login</a></li>
                 <li><a href="matches.html" class="nav-link">Highlight</a></li>
                 <li><a href="players.html" class="nav-link">Klasemen</a></li>
                 <li><a href="blog.html" class="nav-link">Video</a></li>
