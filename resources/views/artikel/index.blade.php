@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Plus Admin</title>
+    <title>Admin Artikel</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{ asset('admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
@@ -67,27 +66,59 @@
             </div>
             <!-- table row starts here -->
             <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                               <form action="{{route('jenis.store')}}" method="POST">
-                        @csrf
-                    <div class=mb-2>
-                        <label for=""><b>Nama</b></label>
-                        <input type="text" name="jenis" id="" class="form-control" required>
-                        <br>
-                          <button  class="btn-primary" type="submit">Simpan</button>
+              <div class="col-lg-12 ">
+                <div class="card">
+                    <div class="card-header">
+                        <span><b>Data Artikel</b></span>
+                        <a href="{{route('artikel.create')}}" class="btn btn-primary" style="float: right">Tambah</a>
                     </div>
-                 </div>
-                                </div>
-                                <!-- /.table-responsive -->
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
+                    <div class="card-body">
+                        @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{session('success')}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                        @endif
+                    <div class="table ">
+                        <table class="table col-md-12">
+                            <thead>
+                                <th scope="col"><b>No</b></th>
+                                <th scope="col"><b>Judul</b></th>
+                                <th scope="col"><b>Id Jenis</b></th>
+                                <th scope="col"><b>Deskripsi</b></th>
+                                <th scope="col"><b>Foto</b></th>
+                                <th scope="col"><b>Penulis</b></th>
+                                <th scope="col"><b>Aksi</b></th>
+                            </thead>
+                            <tbody>
+                                @php $no=1; @endphp
+                                @foreach($artikel as $data)
+                                <tr>
+                                    <td scope="row">{{$no++}}</td>
+                                    <td scope="row">{{$data->judul}}</td>
+                                    <td scope="row">{{$data->jenis->jenis}}</td>
+                                    <td scope="row">{{$data->deskripsi}}</td>
+                                    <td>
+                                        <img src="{{asset('storage/artikel/'. $data->foto)}}" alt="" style="width: 100px; height: 100px;">
+                                    </td>
+                                    <td scope="row">{{$data->penulis}}</td>
+                                    <td>
+                                        <form action="{{route('artikel.destroy', $data->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a href="{{route('artikel.edit', $data->id)}}" class="btn btn-sm btn-success">Edit</a>
+                                            <a href="{{route('artikel.show', $data->id)}}" class="btn btn-sm btn-warning">Show</a>
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-</div>
+             </div>   
+            </div>
                     </div>
                 </div>
                   </div>

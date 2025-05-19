@@ -66,28 +66,44 @@
               </div>
             </div>
             <!-- table row starts here -->
-            <div class="row">
+                <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                               <form action="{{route('jenis.store')}}" method="POST">
-                        @csrf
-                    <div class=mb-2>
-                        <label for=""><b>Nama</b></label>
-                        <input type="text" name="jenis" id="" class="form-control" required>
-                        <br>
-                          <button  class="btn-primary" type="submit">Simpan</button>
-                    </div>
-                 </div>
+                                <div class=mb-2>
+                                    <label for=""><b>Judul</b></label>
+                                    <input type="text" name="judul" class="form-control" value="{{ $artikel->judul }}" disabled>
                                 </div>
-                                <!-- /.table-responsive -->
+                                <div class="mb-2">
+                                    <label for=""><b>Id Jenis</b></label>
+                                    <input type="text" name="id_jenis" class="form-control" value="{{ $artikel->id_jenis }}" disabled>
+                                </div>
+                                <div class="mb-2">
+                                    <label for=""><b>Deskripsi</b></label>
+                                    <input type="textarea" name="deskripsi" class="form-control" value="{{ $artikel->deskripsi }}" disabled>
+                                </div>
+                                <div class="mb-2">
+                                    <label for=""><b>Tanggal Terbit</b></label>
+                                        <input type="text" name="tanggal_terbit" class="form-control" value="{{ $artikel->tanggal_terbit }}" disabled>
+                                </div>
+                                <div class="mb-2">
+                                    <label for=""><b>Penulis</b></label>
+                                        <input type="text" name="penulis" class="form-control" value="{{ $artikel->penulis }}" disabled>
+                                </div>
+                                <div>
+                                <br>
+                                    <a href="{{ route('artikel.index') }}" class="btn btn-primary">Kembali</a>
+                                </div>
                             </div>
-                            <!-- /.panel-body -->
                         </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
                         <!-- /.panel -->
                     </div>
                 </div>
-</div>
+                </div>
                     </div>
                 </div>
                   </div>

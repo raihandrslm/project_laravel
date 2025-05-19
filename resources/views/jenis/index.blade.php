@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Startmin - Bootstrap Admin Theme</title>
-
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Admin Jenis</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{ asset('admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
@@ -25,89 +20,123 @@
     <link rel="stylesheet" href="{{ asset('admin/css/demo_1/style.css')}}" />
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png')}}" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
-<body>
-     <!-- NaVBAR -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            @include('layouts.component.header')
-            <!-- /.navbar-top-links -->
-        </nav>
-        <!--SIDEBAR-->
-        <aside class="sidebar navbar-default" role="navigation">
-            @include('layouts.component.sidebar')
-        </aside>
-        <!-- /.sidebar -->
-        <!-- /#page-wrapper -->
-
-    <div id="wrapper">
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Jenis</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="row justify-content-center">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <span><b>Data Jenis</b></span>
-                                    <a href="{{route('jenis.create')}}" class="btn btn-primary" style="float: right">Tambah</a>
-                                </div>
-                                <div class="card-body">
-                                    @if (session('success'))
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    {{session('success')}}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                                    @endif
-                                <div class="table">
-                                    <table class="table table-responsive">
-                                        <thead>
-                                            <th scope="col">No</th>
-                                            <th scope="col">Nama jenis</th>
-                                            <th scope="col">Aksi</th>
-                                        </thead>
-                                        <tbody>
-                                            @php $no=1; @endphp
-                                            @foreach($jenis as $data)
-                                            <tr>
-                                                <td scope="row">{{$no++}}</td>
-                                                <td scope="row">{{$data->nama_jenis}}</td>
-                                                <td>
-                                                    <form action="{{route('jenis.destroy', $data->id)}}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <a href="{{route('jenis.edit', $data->id)}}" class="btn btn-sm btn-success">Edit</a>
-                                                        <a href="{{route('jenis.show', $data->id)}}" class="btn btn-sm btn-warning">Show</a>
-                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_sidebar.html -->
+      @include('layouts.component.sidebar')
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div id="settings-trigger"><i class="mdi mdi-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close mdi mdi-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-default-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Default
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles default primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles light"></div>
+          </div>
         </div>
-    </div>  
-    <!-- /#wrapper -->
+        <!-- partial -->
+        <!-- partial:partials/_navbar.html -->
+        @include('layouts.component.header')
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper pb-0">
+            <div class="page-header flex-wrap">
+              <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
+                <div class="d-flex align-items-center">
+                  <a href="#">
+                    <p class="m-0 pr-3">Dashboard</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- table row starts here -->
+            <div class="row">
+              <div class="col-lg-12 ">
+                <div class="card">
+                    <div class="card-header">
+                        <span><b>Data Jenis</b></span>
+                        <a href="{{route('jenis.create')}}" class="btn btn-primary" style="float: right">Tambah</a>
+                    </div>
+                    <div class="card-body">
+                        @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{session('success')}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                        @endif
+                    <div class="table ">
+                        <table class="table col-md-12">
+                            <thead>
+                                <th scope="col"><b>No</b></th>
+                                <th scope="col"><b>Nama jenis</b></th>
+                                <th scope="col"><b>Aksi</b></th>
+                            </thead>
+                            <tbody>
+                                @php $no=1; @endphp
+                                @foreach($jenis as $data)
+                                <tr>
+                                    <td scope="row">{{$no++}}</td>
+                                    <td scope="row">{{$data->jenis}}</td>
+                                    <td>
+                                        <form action="{{route('jenis.destroy', $data->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a href="{{route('jenis.edit', $data->id)}}" class="btn btn-sm btn-success">Edit</a>
+                                            <a href="{{route('jenis.show', $data->id)}}" class="btn btn-sm btn-warning">Show</a>
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             </div>   
+            </div>
+                    </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Raihan</span>
+            </div>
 
+            <div>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block"> Distributed By : <a href="" target="_blank">Raihan</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="{{ asset('admin/vendors/js/vendor.bundle.base.js')}}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <script src="{{ asset('admin/vendors/jquery-bar-rating/jquery.barrating.min.js')}}"></script>
@@ -127,7 +156,6 @@
     <!-- endinject -->
     <!-- Custom js for this page -->
     <script src="{{ asset('admin/js/dashboard.js')}}"></script>
-
-</body>
-
+    <!-- End custom js for this page -->
+  </body>
 </html>

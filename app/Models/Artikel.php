@@ -9,7 +9,7 @@ class Artikel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id','judul','id_jenis','deskripsi','tanggal_terbit','penulis'];
+    protected $fillable = ['id','judul','id_jenis','deskripsi','tanggal_terbit','foto','penulis'];
     public $timestamp = true;
 
     // relasi ke tabel jenis

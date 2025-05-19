@@ -1,117 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Startmin - Bootstrap Admin Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="{{ asset('admin/css/metisMenu.min.css"') }}" rel="stylesheet">
-
-    <!-- Timeline CSS -->
-    <link href="{{ asset('admin/css/timeline.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ asset('admin/css/startmin.css') }}" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="{{ asset('admin/css/morris.css') }}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ asset('admin/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
-
-<body>
-
-    <div id="wrapper">
-
-        <!-- NaVBAR -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            @include('layouts.componets.header')
-            <!-- /.navbar-top-links -->
-        </nav>
-
-        <!--SIDEBAR-->
-        <aside class="sidebar navbar-default" role="navigation">
-            @include('layouts.componets.sidebar')
-        </aside>
-        <!-- /.sidebar -->
-
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Edit Jenis</h1>
-                    </div>
-                    <!-- /.col-lg-12 -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Plus Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/vendors/css/vendor.bundle.base.css')}}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{ asset('admin/vendors/jquery-bar-rating/css-stars.css')}}" />
+    <link rel="stylesheet" href="{{ asset('admin/vendors/font-awesome/css/font-awesome.min.css')}}" />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{{ asset('admin/css/demo_1/style.css')}}" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{{ asset('admin/images/favicon.png')}}" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_sidebar.html -->
+      @include('layouts.component.sidebar')
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div id="settings-trigger"><i class="mdi mdi-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close mdi mdi-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-default-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Default
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles default primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles light"></div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_navbar.html -->
+        @include('layouts.component.header')
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper pb-0">
+            <div class="page-header flex-wrap">
+              <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
+                <div class="d-flex align-items-center">
+                  <a href="#">
+                    <p class="m-0 pr-3">Dashboard</p>
+                  </a>
                 </div>
-                <!-- /.row -->
-                <div class="row">
+              </div>
+            </div>
+            <!-- table row starts here -->
+            <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <form action="{{ route('jenis.update', $jenis->id) }}" method="POST"
-                                    enctype="multipart/form-data">
-                                    @csrf
-                                    @method('PUT')
-                                    <div class=mb-2>
-                                        <label for="">Nama</label>
-                                        <input type="text" name="jenis" id="" class="form-control"
-                                            value="{{ $jenis->jenis }}"required>
-                                        <button class="btn-secondary" type="submit">Simpan</button>
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- /.table-responsive -->
+                               <form action="{{route('jenis.update',$jenis->id)}}" method="POST" enctype="multipart/form-data">
+                                @method('put')
+                        @csrf
+                       
+                    <div class=mb-2>
+                        <label for=""><b>Nama</b></label>
+                        <input type="text" name="jenis" id="" class="form-control" value="{{ $jenis->jenis }}" required>
+                        <br>
+                        <button  class="btn-primary" type="submit">Simpan</button>
                     </div>
-                    <!-- /.panel-body -->
+                 </div>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
                 </div>
-                <!-- /.panel -->
+</div>
+                    </div>
+                </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Raihan</span>
+            </div>
+
+            <div>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block"> Distributed By : <a href="" target="_blank">Raihan</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
         </div>
-        <!-- /.row -->
-
-        <!-- /.row -->
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
-    <!-- /.container-fluid -->
-    </div>
-    <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="{{ 'admin/js/jquery.min.js' }}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ 'admin/js/Bootstrap.min.js' }}"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{{ 'admin/js/metisMenu.min.js' }}"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="{{ 'admin/js/raphael.min.js' }}"></script>
-    <script src="{{ 'admin/js/morris.min.js' }}"></script>
-    <script src="{{ 'admin/js/morris-data.js' }}"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="admin/js/startmin.js"></script>
-
-</body>
-
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{{ asset('admin/vendors/js/vendor.bundle.base.js')}}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{{ asset('admin/vendors/jquery-bar-rating/jquery.barrating.min.js')}}"></script>
+    <script src="{{ asset('admin/vendors/chart.js/Chart.min.js')}}"></script>
+    <script src="{{ asset('admin/vendors/flot/jquery.flot.js')}}"></script>
+    <script src="{{ asset('admin/vendors/flot/jquery.flot.resize.js')}}"></script>
+    <script src="{{ asset('admin/vendors/flot/jquery.flot.categories.js')}}"></script>
+    <script src="{{ asset('admin/vendors/flot/jquery.flot.fillbetween.js')}}"></script>
+    <script src="{{ asset('admin/vendors/flot/jquery.flot.stack.js')}}"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{{ asset('admin/js/off-canvas.js')}}"></script>
+    <script src="{{ asset('admin/js/hoverable-collapse.js')}}"></script>
+    <script src="{{ asset('admin/js/misc.js')}}"></script>
+    <script src="{{ asset('admin/js/settings.js')}}"></script>
+    <script src="{{ asset('admin/js/todolist.js')}}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="{{ asset('admin/js/dashboard.js')}}"></script>
+    <!-- End custom js for this page -->
+  </body>
 </html>

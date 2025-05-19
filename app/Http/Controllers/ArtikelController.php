@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Artikel;
+use App\Models\Jenis;
+use Storage;
 
 class ArtikelController extends Controller
 {
@@ -25,7 +28,7 @@ class ArtikelController extends Controller
     public function create()
     {
         $jenis = Jenis::all();
-        return view('artikel.index', compact('jenis'));
+        return view('artikel.create', compact('jenis'));
     }
 
     /**
@@ -43,8 +46,15 @@ class ArtikelController extends Controller
         $artikel->tanggal_terbit = $request->tanggal_terbit;
         $artikel->penulis        = $request->penulis;
 
+        if ($request->hasFile('foto')) {
+            $img = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('storage/artikel', $name);
+            $artikel->foto = $name;
+        }
+
         $artikel->save();
-        session()->flash('success', 'Data Berhasil Ditambahkan😊');
+        session()->flash('success', 'Data Berhasil Ditambahkan');
         return redirect()->route('artikel.index');
     }
 
@@ -82,15 +92,31 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $artikel                 = new Artikel;
+        $validated = $request->validate([
+            'judul' => 'required',
+            'id_jenis' => 'required',
+            'deskripsi' => 'required',
+            'tanggal_terbit' => 'required',
+            'foto' => 'nullable|mimes:jpg,png|max:1024',
+            'penulis' => 'required',
+        ]);
+
+        $artikel                 = Artikel::findOrFail($id);
         $artikel->judul          = $request->judul;
         $artikel->id_jenis       = $request->id_jenis;
         $artikel->deskripsi      = $request->deskripsi;
         $artikel->tanggal_terbit = $request->tanggal_terbit;
         $artikel->penulis        = $request->penulis;
 
+        if ($request->hasFile('foto')) {
+            $img = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('storage/artikel', $name);
+            $artikel->foto = $name;
+        }
+
         $artikel->save();
-        session()->flash('success', 'Data Berhasil Ditambahkan😊');
+        session()->flash('success', 'Data Berhasil Ditambahkan');
         return redirect()->route('artikel.index');
     }
 
@@ -102,8 +128,8 @@ class ArtikelController extends Controller
      */
     public function destroy($id)
     {
-        $artikel = Jenis::findOrFail($id);
+        $artikel = Artikel::findOrFail($id);
         $artikel->delete();
-        return redirect()->route('artikel.index')->with('success', 'Data Berhasil Dihapus😊');
+        return redirect()->route('artikel.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

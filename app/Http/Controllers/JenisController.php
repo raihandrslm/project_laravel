@@ -36,11 +36,11 @@ class JenisController extends Controller
      */
     public function store(Request $request)
     {
-        $jenis        = new Jenis();
-        $jenis->nama_jenis = $request->nama_jenis;
+        $jenis              = new Jenis();
+        $jenis->jenis = $request->jenis;
 
         $jenis->save();
-        session()->flash('success', 'Data Berhasil Ditambahkan😊');
+        session()->flash('success', 'Data Berhasil Ditambahkan');
 
         return redirect()->route('jenis.index');
     }
@@ -79,10 +79,10 @@ class JenisController extends Controller
     public function update(Request $request, $id)
     {
         $jenis                   = Jenis::findOrFail($id);
-        $jenis->nama_jenis       = $request->nama_jenis;
+        $jenis->jenis       = $request->jenis;
 
         $jenis->save();
-        session()->flash('success', 'Data Berhasil Di Update😉');
+        session()->flash('success', 'Data Berhasil Di Update');
         return redirect()->route('jenis.index');
     }
 
@@ -96,6 +96,6 @@ class JenisController extends Controller
     {
         $jenis = Jenis::findOrFail($id);
         $jenis->delete();
-        return redirect()->route('jenis.index')->with('success', 'Data Berhasil Dihapus😊');
+        return redirect()->route('jenis.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

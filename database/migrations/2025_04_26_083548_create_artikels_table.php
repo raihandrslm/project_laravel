@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedbigInteger('id_jenis');
             $table->string('deskripsi');
             $table->date('tanggal_terbit');
+            $table->string('foto');
             $table->string('penulis');
 
             // relasi

@@ -58,10 +58,22 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html">
-              <i class="mdi mdi-compass-outline menu-icon"></i>
+              <i class="mdi mdi-web menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
+          <li class="nav-item">
+             <a class="nav-link" href="{{ route('jenis.index') }}">
+                <i class="mdi mdi-microsoft menu-icon"></i>
+                <span class="menu-title">Jenis</span>
+             </a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" href="{{ route('artikel.index') }}">
+                <i class="mdi mdi-earth outline menu-icon"></i>
+                <span class="menu-title">Artikel</span>
+             </a>
+         </li>
         </ul>
       </nav>
       <!-- partial -->
@@ -204,12 +216,6 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper pb-0">
-            <div class="page-header flex-wrap">
-              <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
-                <button type="button" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
-                  <i class="mdi mdi-plus-circle"></i> Add Artikel </button>
-              </div>
-            </div>
             <!-- first row starts here -->
             <div class="row">
               <div class="col-xl-12 stretch-card grid-margin">

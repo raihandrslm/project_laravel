@@ -70,13 +70,40 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                               <form action="{{route('jenis.store')}}" method="POST">
+                               <form action="{{ route('artikel.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                     <div class=mb-2>
-                        <label for=""><b>Nama</b></label>
-                        <input type="text" name="jenis" id="" class="form-control" required>
+                        <label for=""><b>Judul</b></label>
+                        <input type="text" name="judul" id="" class="form-control" required>
+                    </div>
+                    <div class="form-group">   
+                        <label><b>Id Jenis</b></label>
+                            <select class="form-control" name="id_jenis">
+                                @foreach($jenis as $data)
+                                    <option value="{{ $data->id }}">{{ $data->jenis }}</option>
+                                @endforeach
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Deskripsi</b></label>
+                        <textarea name="deskripsi" id="" cols="20" rows="10" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label><b>Tanggal Terbit</b></label>
+                        <input type="date" class="form-control" name="tanggal_terbit">
+                    </div>
+                    <div class="mb-2">
+                        <label for="">Tambah Foto</label>
+                        <input type="file" name="foto" id="" class="form-control @error('foto') is-invalid @enderror">
+                        @error('foto')
+                        <div class="invalid-feedback">{{$message}}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label><b>Penulis</b></label>
+                        <input type="text" class="form-control" name="penulis">
                         <br>
-                          <button  class="btn-primary" type="submit">Simpan</button>
+                        <button class="btn-primary" type="submit">Simpan</button>
                     </div>
                  </div>
                                 </div>
@@ -87,7 +114,7 @@
                         <!-- /.panel -->
                     </div>
                 </div>
-</div>
+            </div>
                     </div>
                 </div>
                   </div>
