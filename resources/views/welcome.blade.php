@@ -1,567 +1,738 @@
-<!DOCTYPE html>
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
 <html lang="en">
-
 <head>
-  <title>Artikel &mdash; Website by Raihan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/style.css">
-
+	<title>Blogy &mdash; Template by Raihan</title>
 </head>
-
 <body>
 
-  <div class="site-wrap">
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icon-close2 js-menu-toggle"></span>
+	<nav class="site-nav">
+		<div class="container">
+			<div class="menu-bg-wrap">
+				<div class="site-navigation">
+					<div class="row g-0 align-items-center">
+						<div class="col-2">
+							<a href="index.html" class="logo m-0 float-start">Sports<span class="text-primary">.</span></a>
+						</div>
+						<div class="col-8 text-center">
+							<form action="#" class="search-form d-inline-block d-lg-none">
+								<input type="text" class="form-control" placeholder="Search...">
+								<span class="bi-search"></span>
+							</form>
+
+							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li class="has-children">
+									<a href="category.html">Pages</a>
+									<ul class="dropdown">
+										<li><a href="search-result.html">Search Result</a></li>
+										<li><a href="blog.html">Blog</a></li>
+										<li><a href="single.html">Blog Single</a></li>
+										<li><a href="category.html">Category</a></li>
+										<li><a href="about.html">About</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+										<li><a href="#">Menu One</a></li>
+										<li><a href="#">Menu Two</a></li>
+										<li class="has-children">
+											<a href="#">Dropdown</a>
+											<ul class="dropdown">
+												<li><a href="#">Sub Menu One</a></li>
+												<li><a href="#">Sub Menu Two</a></li>
+												<li><a href="#">Sub Menu Three</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="category.html">Culture</a></li>
+								<li><a href="category.html">Business</a></li>
+								<li><a href="category.html">Politics</a></li>
+							</ul>
+						</div>
+						<div class="col-2 text-end">
+							<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+								<span></span>
+							</a>
+							<form action="#" class="search-form d-none d-lg-inline-block">
+								<input type="text" class="form-control" placeholder="Search...">
+								<span class="bi-search"></span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Start retroy layout blog posts -->
+	<section class="section bg-light">
+		<div class="container">
+			<div class="row align-items-stretch retro-layout">
+				<div class="col-md-4">
+					<a href="single.html" class="h-entry mb-30 v-height gradient">
+
+						<div class="featured-img" style="background-image: url('images/kingmadrid.jpg');"></div>
+
+						<div class="text">
+							<span class="date">Mei. 25th, 2025</span>
+							<h2>Lapangan Sepak Bola</h2>
+						</div>
+					</a>
+					<a href="single.html" class="h-entry v-height gradient">
+
+						<div class="featured-img" style="background-image: url('images/lapangbasket.jpg');"></div>
+
+						<div class="text">
+							<span class="date">April. 14th, 2025</span>
+							<h2>Lapangan Basket</h2>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="single.html" class="h-entry img-5 h-100 gradient">
+
+						<div class="featured-img" style="background-image: url('images/olahraga.jpg');"></div>
+
+						<div class="text">
+							<span class="date">Feb. 21th, 2025</span>
+							<h2>Mengenal Semua Jenis Olahraga Bola Besar dan Kecil!</h2>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="single.html" class="h-entry mb-30 v-height gradient">
+
+						<div class="featured-img" style="background-image: url('images/lapangvolly.png');"></div>
+
+						<div class="text">
+							<span class="date">Nov. 19th, 2025</span>
+							<h2>Lapangan Volly</h2>
+						</div>
+					</a>
+					<a href="single.html" class="h-entry v-height gradient">
+
+						<div class="featured-img" style="background-image: url('images/lapangbadminton.jpg');"></div>
+
+						<div class="text">
+							<span class="date">Jul. 30th, 2025</span>
+							<h2>Lapangan Bulu Tangkis</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End retroy layout blog posts -->
+
+	<!-- Start posts-entry -->
+	<section class="section posts-entry">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<h2 class="posts-entry-title">Sepak Bola</h2>
+				</div>
+			</div>
+			<div class="row g-3">
+      @foreach ( $artikel->take(2) as $data )
+				<div class="col-md-9">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 400px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 400px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
+							</div>
+						</div>
+            <div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 400px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 400px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+        @endforeach
+				<div class="col-md-3">
+					<ul class="list-unstyled blog-entry-sm">
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+     
+		</div>
+	</section>
+	<!-- End posts-entry -->
+
+	<!-- Start posts-entry -->
+	<section class="section posts-entry posts-entry-sm bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="blog-entry">
+						<a href="single.html" class="img-link">
+							<img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid">
+						</a>
+						<span class="date">Apr. 14th, 2022</span>
+						<h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#" class="read-more">Continue Reading</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="blog-entry">
+						<a href="single.html" class="img-link">
+							<img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid">
+						</a>
+						<span class="date">Apr. 14th, 2022</span>
+						<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#" class="read-more">Continue Reading</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="blog-entry">
+						<a href="single.html" class="img-link">
+							<img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid">
+						</a>
+						<span class="date">Apr. 14th, 2022</span>
+						<h2><a href="single.html">UK sees highest inflation in 30 years</a></h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#" class="read-more">Continue Reading</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="blog-entry">
+						<a href="single.html" class="img-link">
+							<img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid">
+						</a>
+						<span class="date">Apr. 14th, 2022</span>
+						<h2><a href="single.html">Don’t assume your user data in the cloud is safe</a></h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#" class="read-more">Continue Reading</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End posts-entry -->
+
+	<!-- Start posts-entry -->
+	<section class="section posts-entry">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<h2 class="posts-entry-title">Basket</h2>
+				</div>
+			</div>
+			<div class="row g-3">
+       @foreach ( $artikel->skip(2)->take(3) as $data )
+				<div class="col-md-9">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 500px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 500px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
+							</div>
+						</div>
+            <div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 500px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 500px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+        @endforeach
+				<div class="col-md-3">
+					<ul class="list-unstyled blog-entry-sm">
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+
+						<li>
+							<span class="date">Apr. 14th, 2022</span>
+							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<h2 class="posts-entry-title">Volly</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_7_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_6_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_5_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="post-entry-alt">
+						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
+						<div class="excerpt">
+							
+							
+
+							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
+							<div class="post-meta align-items-center text-left clearfix">
+								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
+								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
+								<span>&nbsp;-&nbsp; July 19, 2019</span>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
+							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<div class="section bg-light">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-sm-6">
+					<h2 class="posts-entry-title">Bulu Tangkis</h2>
+				</div>
+			</div>
+
+			<div class="row align-items-stretch retro-layout-alt">
+
+				<div class="col-md-5 order-md-2">
+					<a href="single.html" class="hentry img-1 h-100 gradient">
+						<div class="featured-img" style="background-image: url('images/img_2_vertical.png');"></div>
+						<div class="text">
+							<span>February 12, 2019</span>
+							<h2>Meta unveils fees on metaverse sales</h2>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-7">
+
+					<a href="single.html" class="hentry img-2 v-height mb30 gradient">
+						<div class="featured-img" style="background-image: url('images/img_1_horizontal.jpg');"></div>
+						<div class="text text-sm">
+							<span>February 12, 2019</span>
+							<h2>AI can now kill those annoying cookie pop-ups</h2>
+						</div>
+					</a>
+
+					<div class="two-col d-block d-md-flex justify-content-between">
+						<a href="single.html" class="hentry v-height img-2 gradient">
+							<div class="featured-img" style="background-image: url('images/img_2_sq.jpg');"></div>
+							<div class="text text-sm">
+								<span>February 12, 2019</span>
+								<h2>Don’t assume your user data in the cloud is safe</h2>
+							</div>
+						</a>
+						<a href="single.html" class="hentry v-height img-2 ms-auto float-end gradient">
+							<div class="featured-img" style="background-image: url('images/img_3_sq.jpg');"></div>
+							<div class="text text-sm">
+								<span>February 12, 2019</span>
+								<h2>Startup vs corporate: What job suits you best?</h2>
+							</div>
+						</a>
+					</div>  
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3 class="mb-4">About</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div> <!-- /.widget -->
+					<div class="widget">
+						<h3>Social</h3>
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-apple"></span></a></li>
+							<li><a href="#"><span class="icon-pinterest"></span></a></li>
+							<li><a href="#"><span class="icon-google"></span></a></li>
+						</ul>
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-4 -->
+				<div class="col-lg-4 ps-lg-5">
+					<div class="widget">
+						<h3 class="mb-4">Company</h3>
+						<ul class="list-unstyled float-start links">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Vision</a></li>
+							<li><a href="#">Mission</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						<ul class="list-unstyled float-start links">
+							<li><a href="#">Partners</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Creative</a></li>
+						</ul>
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3 class="mb-4">Recent Post Entry</h3>
+						<div class="post-entry-footer">
+							<ul>
+								<li>
+									<a href="">
+										<img src="images/img_1_sq.jpg" alt="Image placeholder" class="me-4 rounded">
+										<div class="text">
+											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
+											<div class="post-meta">
+												<span class="mr-2">March 15, 2018 </span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/img_2_sq.jpg" alt="Image placeholder" class="me-4 rounded">
+										<div class="text">
+											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
+											<div class="post-meta">
+												<span class="mr-2">March 15, 2018 </span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/img_3_sq.jpg" alt="Image placeholder" class="me-4 rounded">
+										<div class="text">
+											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
+											<div class="post-meta">
+												<span class="mr-2">March 15, 2018 </span>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-4 -->
+			</div> <!-- /.row -->
+
+			<div class="row mt-5">
+				<div class="col-12 text-center">
+          <!-- 
+              **==========
+              NOTE: 
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+              **==========
+            -->
+
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed by <a href="https://themewagon.com">Raihan</a> <!-- License information: https://untree.co/license/ -->
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
+      </div> <!-- /.container -->
+    </footer> <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+    	<div class="spinner-border text-primary" role="status">
+    		<span class="visually-hidden">Loading...</span>
+    	</div>
     </div>
 
-    <header class="site-navbar py-4" role="banner">
 
-      <div class="container">
-        <div class="d-flex align-items-center">
-          <div class="site-logo">
-            <a href="index.html">
-              <img src="images/logo.png" alt="Logo">
-            </a>
-          </div>
-          <div class="ml-auto">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html" class="nav-link">Login</a></li>
-                <li><a href="matches.html" class="nav-link">Highlight</a></li>
-                <li><a href="players.html" class="nav-link">Klasemen</a></li>
-                <li><a href="blog.html" class="nav-link">Video</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
 
-            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
-                class="icon-menu h3 text-white"></span></a>
-          </div>
-        </div>
-      </div>
+    <script src="js/flatpickr.min.js"></script>
 
-    </header>
 
-    <div class="hero overlay" style="background-image: url('images/briwell.jpg');">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 ml-auto">
-            <h1 class="text-white">BRI LIGA 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, molestias repudiandae pariatur.</p>
-            <div id="date-countdown"></div>
-            <p>
-              <a href="#" class="btn btn-primary py-3 px-4 mr-3">Book Ticket</a>
-              <a href="#" class="more light">Learn More</a>
-            </p>  
-          </div>
-        </div>
-      </div>
-    </div>
+    <script src="js/aos.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
 
-    <div class="container"
-
-      <div class="row">
-        <div class="col-lg-12">
-          
-          <div class="d-flex team-vs">
-            <span class="score">2-1</span>
-            <div class="team-1 w-50">
-              <div class="team-details w-100 text-center">
-                <img src="images/logopersib.png" alt="Image" class="img-fluid">
-                <h3>Persib Bandung</h3>
-                <ul class="list-unstyled">
-                  <li>Beckham Putra (69')</li>
-                  <li>Gustavo Moreno de Franca (82')</li>
-                </ul>
-              </div>
-            </div>
-            <div class="team-2 w-50">
-              <div class="team-details w-100 text-center">
-                <img src="images/balijuga.png" alt="Image" class="img-fluid">
-                <h3>Bali United</h3>
-                <ul class="list-unstyled">
-                  <li>Irfan Jaya (23')</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="latest-news">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 title-section">
-            <h2 class="heading">Highlight</h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/persibremontada.jpg" alt="Image" class="img-fluid">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <h3 class="mb-3">Persib Berhasil Comeback dari Bali United, REMONTADAAA!!!</h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/kompas.jpg" alt="">
-                    </div>
-                    <div class="text">
-                      <h4>Kompas.com</h4>
-                      <span>April 18, 2025 &bullet; Sports</span>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/dewaunt.jpg" alt="Image" class="img-fluid">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <h3 class="mb-3">Dibungkam Malut United, Pelatih Dewa United Ingin Sapu Bersih Laga Sisa!</h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/goalcom.png" alt="">
-                    </div>
-                    <div class="text">
-                      <h4>Goal.com</h4>
-                      <span>April 25, 2025 &bullet; Sports</span>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry">
-              <a href="#">
-                <img src="images/persibjuara.webp" alt="Image" class="img-fluid">
-              </a>
-              <div class="caption">
-                <div class="caption-inner">
-                  <h3 class="mb-3">Rekor Bersejarah Back to Back Champions Menanti Persib Bandung!</h3>
-                  <div class="author d-flex align-items-center">
-                    <div class="img mb-2 mr-3">
-                      <img src="images/cnnyeuh.png" alt="">
-                    </div>
-                    <div class="text">
-                      <h4>CNN Indonesia</h4>
-                      <span>April 26, 2025 &bullet; Sports</span>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
     
-    <div class="site-section bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 title-section">
-            <h2 class="heading">Klasemen</h2>
-          </div>
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Next Match</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    <div class="team-1 text-center">
-                      <img src="images/kingpersib.png" alt="Image">
-                      <h3>Persib Bandung</h3>
-                    </div>
-                    <div>
-                      <span class="vs"><span>VS</span></span>
-                    </div>
-                    <div class="team-2 text-center">
-                      <img src="images/PSleman.png" alt="Image">
-                      <h3>PSS Sleman</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
-                <h4>BRI LIGA 1</h4>
-                <p class="mb-5">
-                  <span class="d-block">April 26th, 2025</span>
-                  <span class="d-block">19:00 PM</span>
-                  <strong class="text-primary">STD Gelora Bandung Lautan Api</strong>
-                </p>
-
-                <div id="date-countdown2" class="pb-1"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            
-            <div class="widget-next-match">
-              <table class="table custom-table">
-                <thead>
-                  <tr>
-                    <th>P</th>
-                    <th>Team</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>PTS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><strong class="text-white">Persib Bandung</strong></td>
-                    <td>17</td>
-                    <td>10</td>
-                    <td>2</td>
-                    <td>61</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><strong class="text-white">Dewa United</strong></td>
-                    <td>15</td>
-                    <td>8</td>
-                    <td>7</td>
-                    <td>53</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><strong class="text-white">Persebaya Surabaya</strong></td>
-                    <td>15</td>
-                    <td>7</td>
-                    <td>7</td>
-                    <td>52</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td><strong class="text-white">Malut United</strong></td>
-                    <td>13</td>
-                    <td>11</td>
-                    <td>6</td>
-                    <td>50</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td><strong class="text-white">Persija Jakarta</strong></td>
-                    <td>13</td>
-                    <td>8</td>
-                    <td>8</td>
-                    <td>47</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td><strong class="text-white">Borneo FC</strong></td>
-                    <td>13</td>
-                    <td>7</td>
-                    <td>10</td>
-                    <td>46</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td><strong class="text-white">PSBS Biak</strong></td>
-                    <td>12</td>
-                    <td>8</td>
-                    <td>10</td>
-                    <td>44</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td><strong class="text-white">PSM Makassar</strong></td>
-                    <td>10</td>
-                    <td>14</td>
-                    <td>6</td>
-                    <td>44</td>
-                  </tr>
-                <tr>
-                    <td>9</td>
-                    <td><strong class="text-white">Bali United</strong></td>
-                    <td>12</td>
-                    <td>8</td>
-                    <td>10</td>
-                    <td>44</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- .site-section -->
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-6 title-section">
-            <h2 class="heading">Video</h2>
-          </div>
-          <div class="col-6 text-right">
-            <div class="custom-nav">
-            <a href="#" class="js-custom-prev-v2"><span class="icon-keyboard_arrow_left"></span></a>
-            <span></span>
-            <a href="#" class="js-custom-next-v2"><span class="icon-keyboard_arrow_right"></span></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="owl-4-slider owl-carousel">
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Dogba set for Juvendu return?</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Kai Nets Double To Secure Comfortable Away Win</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Romolu to stay at Real Nadrid?</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Dogba set for Juvendu return?</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Kai Nets Double To Secure Comfortable Away Win</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="video-media">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              <a href="https://vimeo.com/139714818" class="d-flex play-button align-items-center" data-fancybox>
-                <span class="icon mr-3">
-                  <span class="icon-play"></span>
-                </span>
-                <div class="caption">
-                  <h3 class="m-0">Romolu to stay at Real Nadrid?</h3>
-                </div>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container site-section">
-      <div class="row">
-        <div class="col-6 title-section">
-          <h2 class="heading">Our Blog</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="custom-media d-flex">
-            <div class="img mr-4">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Madrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
-              <p><a href="#">Read more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="custom-media d-flex">
-            <div class="img mr-4">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Nadrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
-              <p><a href="#">Read more</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>News</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Club News</a></li>
-                <li><a href="#">Media Center</a></li>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">RSS</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Tickets</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Online Ticket</a></li>
-                <li><a href="#">Payment and Prices</a></li>
-                <li><a href="#">Contact &amp; Booking</a></li>
-                <li><a href="#">Tickets</a></li>
-                <li><a href="#">Coupon</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Liga</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Premier League</a></li>
-                <li><a href="#">La Liga</a></li>
-                <li><a href="#">Serie A</a></li>
-                <li><a href="#">Ligue 1</a></li>
-                <li><a href="#">UEFA Champions League</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Social</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">TikTok</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row text-center">
-          <div class="col-md-12">
-            <div class=" pt-5">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="icon-heart"
-                  aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Raihan</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </footer>
-
-
-
-  </div>
-  <!-- .site-wrap -->
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-  <script src="js/main.js"></script>
-
-</body>
-
-</html>
+  </body>
+  </html>
