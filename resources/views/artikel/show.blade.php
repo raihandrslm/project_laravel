@@ -87,6 +87,11 @@
                                         <input type="text" name="tanggal_terbit" class="form-control" value="{{ $artikel->tanggal_terbit }}" disabled>
                                 </div>
                                 <div class="mb-2">
+                                    <label for=""><b>Foto</b></label>
+                                    <br>
+                                      <img src="{{ asset('storage/artikel/'. $artikel->foto)}}" alt="" style="width: 150px; height: 120px;">
+                                </div>
+                                <div class="mb-2">
                                     <label for=""><b>Penulis</b></label>
                                         <input type="text" name="penulis" class="form-control" value="{{ $artikel->penulis }}" disabled>
                                 </div>

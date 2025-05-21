@@ -55,11 +55,6 @@
 							<a href="index.html" class="logo m-0 float-start">Sports<span class="text-primary">.</span></a>
 						</div>
 						<div class="col-8 text-center">
-							<form action="#" class="search-form d-inline-block d-lg-none">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>
-
 							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
 								<li class="active"><a href="index.html">Home</a></li>
 								<li class="has-children">
@@ -83,19 +78,15 @@
 										</li>
 									</ul>
 								</li>
-								<li><a href="category.html">Culture</a></li>
-								<li><a href="category.html">Business</a></li>
-								<li><a href="category.html">Politics</a></li>
+								<li><a href="category.html">Sepak Bola</a></li>
+								<li><a href="category.html">Basket</a></li>
+								<li><a href="category.html">Volly</a></li>
 							</ul>
 						</div>
 						<div class="col-2 text-end">
 							<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
 								<span></span>
 							</a>
-							<form action="#" class="search-form d-none d-lg-inline-block">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -168,11 +159,11 @@
 		<div class="container">
 			<div class="row mb-4">
 				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Sepak Bola</h2>
+					<h1 class="posts-entry-title">Sepak Bola</h1>
 				</div>
 			</div>
 			<div class="row g-3">
-      @foreach ( $artikel->take(2) as $data )
+      	@foreach ( $artikel->take(2) as $data )
 				<div class="col-md-9">
 					<div class="row g-3">
 						<div class="col-md-6">
@@ -249,7 +240,7 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="blog-entry">
 						<a href="single.html" class="img-link">
-							<img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid">
+							<img src="images/ronaldo.jpg" alt="Image" class="img-fluid">
 						</a>
 						<span class="date">Apr. 14th, 2022</span>
 						<h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
@@ -260,7 +251,7 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="blog-entry">
 						<a href="single.html" class="img-link">
-							<img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid">
+							<img src="images/ronaldo.jpg" alt="Image" class="img-fluid">
 						</a>
 						<span class="date">Apr. 14th, 2022</span>
 						<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
@@ -271,7 +262,7 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="blog-entry">
 						<a href="single.html" class="img-link">
-							<img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid">
+							<img src="images/ronaldo.jpg" alt="Image" class="img-fluid">
 						</a>
 						<span class="date">Apr. 14th, 2022</span>
 						<h2><a href="single.html">UK sees highest inflation in 30 years</a></h2>
@@ -282,7 +273,7 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="blog-entry">
 						<a href="single.html" class="img-link">
-							<img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid">
+							<img src="images/ronaldo.jpg" alt="Image" class="img-fluid">
 						</a>
 						<span class="date">Apr. 14th, 2022</span>
 						<h2><a href="single.html">Don’t assume your user data in the cloud is safe</a></h2>
@@ -300,11 +291,11 @@
 		<div class="container">
 			<div class="row mb-4">
 				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Basket</h2>
+					<h1 class="posts-entry-title">Basket</h1>
 				</div>
 			</div>
 			<div class="row g-3">
-       @foreach ( $artikel->skip(2)->take(3) as $data )
+       	@foreach ( $artikel->skip(2)->take(1) as $data )
 				<div class="col-md-9">
 					<div class="row g-3">
 						<div class="col-md-6">
@@ -374,182 +365,52 @@
 
 	<section class="section">
 		<div class="container">
-
 			<div class="row mb-4">
 				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Volly</h2>
+					<h1 class="posts-entry-title">Volly</h1>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_7_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
+			<div class="row g-3">
+      	@foreach ( $artikel->skip(3)->take(2) as $data )
+				<div class="col-md-9">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 400px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 400px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
 							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
+						</div>
+            <div class="col-md-6">
+							<div class="blog-entry">
+                            @if ($data->foto)
+                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                                     alt="Gambar"
+                                     class="img-fluid"
+                                     style="width: 400px; height: 300px; object-fit: cover;">
+                            @else
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                     style="width: 400px; height: 300px;">
+                                    Tidak ada gambar
+                                </div>
+                            @endif
+								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_6_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_5_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
+        @endforeach
 			
 		</div>
 	</section>
@@ -559,7 +420,7 @@
 
 			<div class="row mb-4">
 				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Bulu Tangkis</h2>
+					<h1 class="posts-entry-title">Bulu Tangkis</h1>
 				</div>
 			</div>
 
@@ -615,7 +476,7 @@
 				<div class="col-lg-4">
 					<div class="widget">
 						<h3 class="mb-4">About</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum maiores nesciunt sit cumque veritatis id ducimus, dignissimos sapiente mollitia suscipit laboriosam corrupti ea. Beatae atque, impedit facere molestiae in natus?</p>
 					</div> <!-- /.widget -->
 					<div class="widget">
 						<h3>Social</h3>

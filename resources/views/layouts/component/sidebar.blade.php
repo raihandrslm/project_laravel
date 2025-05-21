@@ -30,13 +30,16 @@
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+            <a class="nav-link" href="{{ route('jenis.index') }}">
+              <i class="mdi mdi-microsoft menu-icon"></i>
+              <span class="menu-title">Jenis</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+            <a class="nav-link" href="{{ route('artikel.index') }}">
+              <i class="mdi mdi-microsoft menu-icon"></i>
+              <span class="menu-title">Artikel</span>
+            </a>
           </li>
         </ul>
       </div>
