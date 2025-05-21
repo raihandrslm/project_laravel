@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Plus Admin</title>
+    <title>Admin Artikel - Edit</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{ asset('admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
@@ -75,7 +75,7 @@
                         @csrf
                     <div class=mb-2>
                         <label for=""><b>Judul</b></label>
-                        <input type="text" name="judul" id="" class="form-control" required>
+                        <input type="text" name="judul" id="" class="form-control" value="{{ $artikel->judul }}" required>
                     </div>
                     <div class="form-group">   
                         <label><b>Id Jenis</b></label>
@@ -87,11 +87,11 @@
                     </div>
                     <div class="form-group">
                         <label><b>Deskripsi</b></label>
-                        <textarea name="deskripsi" id="" cols="20" rows="10" class="form-control" required></textarea>
+                        <textarea name="deskripsi" id="" cols="20" rows="10" class="form-control" required>{{ $artikel->deskripsi}}</textarea>
                     </div>
                     <div class="form-group">
                         <label><b>Tanggal Terbit</b></label>
-                        <input type="date" class="form-control" name="tanggal_terbit">
+                        <input type="date" class="form-control" value="{{ $artikel->tanggal_terbit }}" name="tanggal_terbit">
                     </div>
                     <div class="mb-2">
                         <label for="">Ganti Foto</label>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="form-group">
                         <label><b>Penulis</b></label>
-                        <input type="text" class="form-control" name="penulis">
+                        <input type="text" class="form-control" value="{{ $artikel->penulis}}" name="penulis">
                         <br>
                         <button class="btn-primary" type="submit">Simpan</button>
                     </div>

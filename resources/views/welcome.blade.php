@@ -163,72 +163,27 @@
 				</div>
 			</div>
 			<div class="row g-3">
-      	@foreach ( $artikel->take(2) as $data )
-				<div class="col-md-9">
-					<div class="row g-3">
-						<div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 400px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 400px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
-							</div>
-						</div>
-            <div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 400px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 400px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-        @endforeach
-				<div class="col-md-3">
-					<ul class="list-unstyled blog-entry-sm">
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-					</ul>
-				</div>
+    			@foreach ($artikel->take(2) as $data)
+        			<div class="col-md-6">
+            			<div class="blog-entry">
+                			@if ($data->foto)
+                    			<img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                        			alt="Gambar"
+                        			class="img-fluid"
+                        			style="width: 100%; height: 300px; object-fit: cover;">
+                			@else
+                    			<div class="bg-light d-flex align-items-center justify-content-center"
+                         			style="width: 100%; height: 300px;">
+                        			Tidak ada gambar
+                    			</div>
+               				@endif
+                			<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+                			<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							<p><a href="#" class="read-more">Baca Selengkapnya</a></p>
+            			</div>
+        			</div>
+    			@endforeach
 			</div>
-     
 		</div>
 	</section>
 	<!-- End posts-entry -->
@@ -295,70 +250,26 @@
 				</div>
 			</div>
 			<div class="row g-3">
-       	@foreach ( $artikel->skip(2)->take(1) as $data )
-				<div class="col-md-9">
-					<div class="row g-3">
-						<div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 500px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 500px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
-							</div>
-						</div>
-            <div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 500px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 500px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-        @endforeach
-				<div class="col-md-3">
-					<ul class="list-unstyled blog-entry-sm">
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Apr. 14th, 2022</span>
-							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-					</ul>
-				</div>
+    			@foreach ($artikel->skip(2)->take(2) as $data)
+        			<div class="col-md-6">
+            			<div class="blog-entry">
+                			@if ($data->foto)
+                    			<img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                        			alt="Gambar"
+                        			class="img-fluid"
+                        			style="width: 100%; height: 300px; object-fit: cover;">
+                			@else
+                    			<div class="bg-light d-flex align-items-center justify-content-center"
+                         			style="width: 100%; height: 300px;">
+                        			Tidak ada gambar
+                    			</div>
+               				@endif
+                			<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+                			<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							<p><a href="#" class="read-more">Baca Selengkapnya</a></p>
+            			</div>
+        			</div>
+    			@endforeach
 			</div>
 		</div>
 	</section>
@@ -371,48 +282,27 @@
 				</div>
 			</div>
 			<div class="row g-3">
-      	@foreach ( $artikel->skip(3)->take(2) as $data )
-				<div class="col-md-9">
-					<div class="row g-3">
-						<div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 400px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 400px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>	
-							</div>
-						</div>
-            <div class="col-md-6">
-							<div class="blog-entry">
-                            @if ($data->foto)
-                                <img src="{{ asset('storage/artikel/' . $data->foto) }}"
-                                     alt="Gambar"
-                                     class="img-fluid"
-                                     style="width: 400px; height: 300px; object-fit: cover;">
-                            @else
-                                <div class="bg-light d-flex align-items-center justify-content-center"
-                                     style="width: 400px; height: 300px;">
-                                    Tidak ada gambar
-                                </div>
-                            @endif
-								<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
-								<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-        @endforeach
-			
-		</div>
+    			@foreach ($artikel->skip(4)->take(2) as $data)
+        			<div class="col-md-6">
+            			<div class="blog-entry">
+                			@if ($data->foto)
+                    			<img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                        			alt="Gambar"
+                        			class="img-fluid"
+                        			style="width: 100%; height: 300px; object-fit: cover;">
+                			@else
+                    			<div class="bg-light d-flex align-items-center justify-content-center"
+                         			style="width: 100%; height: 300px;">
+                        			Tidak ada gambar
+                    			</div>
+               				@endif
+                			<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+                			<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							<p><a href="#" class="read-more">Baca Selengkapnya</a></p>
+            			</div>
+        			</div>
+    			@endforeach
+			</div>
 	</section>
 
 	<div class="section bg-light">
@@ -423,52 +313,30 @@
 					<h1 class="posts-entry-title">Bulu Tangkis</h1>
 				</div>
 			</div>
-
-			<div class="row align-items-stretch retro-layout-alt">
-
-				<div class="col-md-5 order-md-2">
-					<a href="single.html" class="hentry img-1 h-100 gradient">
-						<div class="featured-img" style="background-image: url('images/img_2_vertical.png');"></div>
-						<div class="text">
-							<span>February 12, 2019</span>
-							<h2>Meta unveils fees on metaverse sales</h2>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-7">
-
-					<a href="single.html" class="hentry img-2 v-height mb30 gradient">
-						<div class="featured-img" style="background-image: url('images/img_1_horizontal.jpg');"></div>
-						<div class="text text-sm">
-							<span>February 12, 2019</span>
-							<h2>AI can now kill those annoying cookie pop-ups</h2>
-						</div>
-					</a>
-
-					<div class="two-col d-block d-md-flex justify-content-between">
-						<a href="single.html" class="hentry v-height img-2 gradient">
-							<div class="featured-img" style="background-image: url('images/img_2_sq.jpg');"></div>
-							<div class="text text-sm">
-								<span>February 12, 2019</span>
-								<h2>Don’t assume your user data in the cloud is safe</h2>
-							</div>
-						</a>
-						<a href="single.html" class="hentry v-height img-2 ms-auto float-end gradient">
-							<div class="featured-img" style="background-image: url('images/img_3_sq.jpg');"></div>
-							<div class="text text-sm">
-								<span>February 12, 2019</span>
-								<h2>Startup vs corporate: What job suits you best?</h2>
-							</div>
-						</a>
-					</div>  
-
-				</div>
+			<div class="row g-3">
+    			@foreach ($artikel->skip(6)->take(2) as $data)
+        			<div class="col-md-6">
+            			<div class="blog-entry">
+                			@if ($data->foto)
+                    			<img src="{{ asset('storage/artikel/' . $data->foto) }}"
+                        			alt="Gambar"
+                        			class="img-fluid"
+                        			style="width: 100%; height: 300px; object-fit: cover;">
+                			@else
+                    			<div class="bg-light d-flex align-items-center justify-content-center"
+                         			style="width: 100%; height: 300px;">
+                        			Tidak ada gambar
+                    			</div>
+               				@endif
+                			<h2><a href="single.html">{{ \Illuminate\Support\Str::limit($data->judul, 40) }}</a></h2>
+                			<p>{{ \Illuminate\Support\Str::limit($data->deskripsi, 100) }}</p>
+							<p><a href="#" class="read-more">Baca Selengkapnya</a></p>
+            			</div>
+        			</div>
+    			@endforeach
 			</div>
-
 		</div>
 	</div>
-
 
 	<footer class="site-footer">
 		<div class="container">
